@@ -18,6 +18,7 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": [
+        'mail',
         'web_responsive',
     ],
     "data": [
