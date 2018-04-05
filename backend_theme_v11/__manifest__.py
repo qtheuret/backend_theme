@@ -18,6 +18,7 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": [
+        'web',
         'mail',
         'web_responsive',
     ],
@@ -25,7 +26,7 @@
         'views/assets.xml',
         'views/res_company_view.xml',
         'views/users.xml',
-        'views/sidebar.xml',
+        #'views/sidebar.xml',
     ],
 }
 

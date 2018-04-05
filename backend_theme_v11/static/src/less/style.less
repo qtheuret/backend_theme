@@ -34,6 +34,10 @@ body a {
 	}
 }
 
+.o_web_client > .o_main .o_main_content .o_content {
+    background-color: @gray-lighter;
+}
+
 // Fix color Add file button
 .o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
     color: @gray-dark !important;
@@ -52,6 +56,11 @@ body a {
             background-color: @brand-primary;
         }
     }
+}
+
+// Annoying notification bar
+.o_mail_chat .o_mail_annoying_notification_bar {
+    background-color: red;
 }
 
 // Align green progress indicator
@@ -92,6 +101,11 @@ body a {
     background-color: @gray-lighter !important;
 }
 
+.o_calendar_button_week:active, .o_calendar_button_day:active, .o_calendar_button_month:active,
+.o_calendar_button_week.active, .o_calendar_button_day.active, .o_calendar_button_month.active{
+    background-color: @brand-primary !important;
+}
+
 .btn-group.open .dropdown-toggle {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -100,6 +114,10 @@ body a {
 
 .o_form_view .oe_button_box .oe_stat_button {
     border: 1px solid @gray-lighter;
+}
+
+.o_form_view .oe_button_box .oe_stat_button:hover {
+    color: @gray-dark;
 }
 
 .o_dropdown_toggler_btn, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .btn-icon, .o_graph_button {
@@ -260,6 +278,10 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 	border-bottom: 2px solid @brand-info;
 }
 
+.o_searchview_input:focus {
+    border: none;
+}
+
 .o_input {
     border: 1px solid #ccc;
     border-top-style: none;
@@ -269,18 +291,18 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background-color: #E5E5E5;
-    color: darken(@navbar-default-bg, 15%);
+    background-color: @brand-primary;
+    color: white;
 }
 
 // Sidechatter like EE
 
-@o-chatter-width: 510px;
+@o-chatter-width: 600px;
 
 @media screen and (min-width: 1600px) {
 
     .o_form_sheet_bg {
-        width: ~"calc(100% - 510px)";
+        width: ~"calc(100% - 600px)";
         float: left;
         height: 100vh;
         overflow: auto;
@@ -333,3 +355,90 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
   }
 }
 
+.o_required_modifier.o_input,.o_required_modifier .o_input {
+    background-color: #EF7F0066 !important;
+}
+
+.o_planner_dialog > .modal-dialog > .modal-content > .modal-header {
+    background-color: @brand-primary;
+}
+
+.o_planner_dialog > .modal-dialog > .modal-content > .modal-body > .o_planner_menu > li.active > a {
+    color: @brand-primary;
+}
+
+.o_planner_dialog > .modal-dialog > .modal-content > .modal-body > .o_planner_page .odoo_purple, .o_planner_dialog > .modal-dialog > .modal-content > .modal-body > .o_planner_page a.btn.odoo_purple, .o_planner_dialog > .modal-dialog > .modal-content > .modal-body > .o_planner_page .btn.odoo_purple:hover {
+    background-color: @brand-primary;
+}
+
+// datepicker ========================
+
+.datepicker {
+    .table-condensed {
+        > thead {
+            color: white;
+            background-color: @odoo-brand-primary;
+
+            > tr {
+                &:first-child {
+                    th:hover {
+                        color: white;
+                        background-color: darken(@odoo-brand-primary, 10%);
+                    }
+                }
+
+                &:last-child {
+                    color: @odoo-datepicker-week-color;
+                    background-color: @odoo-datepicker-week-bg-color;
+                }
+                > th {
+                    border-radius: 0;
+                }
+            }
+        }
+
+        > tbody {
+            > tr {
+                > td {
+                    &.active, .active {
+                        background-color: @odoo-brand-optional;
+                        border-radius: 100px;
+                    }
+
+                    &.today:before {
+                        border-bottom-color: @odoo-brand-optional;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Kanban records
+
+.o_kanban_record {
+    border-radius: 5px;
+}
+
+.o_kanban_view .o_kanban_record .o_kanban_record_title {
+    font-weight: bold;
+}
+
+.o_kanban_view .o_kanban_record:hover {
+    border-color: @brand-primary;
+}
+
+.badge {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    border: 1px solid @brand-primary;
+    color: @brand-primary;
+}
+
+
+.o_search_options .o_filters_menu li > a:hover,
+.o_search_options .o_favorites_menu li > a:hover,
+.o_search_options .o_group_by_menu li > a:hover {
+    color: white;
+}
